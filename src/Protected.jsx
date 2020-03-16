@@ -29,11 +29,6 @@ function Protected() {
         return <div>Loading...</div>;
     }
 
-    const button = authState.isAuthenticated ?
-        <button onClick={() => { authService.logout() }}>Logout</button> :
-        <button onClick={() => { authService.login() }}>Login</button>;
-
-
     return (
         <div>
             {
@@ -45,7 +40,6 @@ function Protected() {
                         <h1>Your user info</h1>
                         <h2>Email: {userEmail}</h2>
                         <h2>Name: {userFirstName} {userLastName}</h2>
-                        {button}
                     </>
             }
         </div>
